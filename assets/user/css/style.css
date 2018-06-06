@@ -1,0 +1,190 @@
+.browse {
+    min-height: 350px;
+    background: #f7901d url(../img/innerbg.jpg) repeat;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+.no-padding {
+    padding: 0;
+}
+.frespace{
+	height: 150px;
+	width: 100%;
+}
+.col-md-2.upldphoto {
+    background: #e2e2e2;
+    /*height: 470px;*/
+}
+.scroll {
+    overflow: scroll;
+    height: 106px;
+    background: white;
+    padding: 10px;
+}
+label {
+    width: 100%;
+}
+.btnnxt {
+    float: right;
+    margin: 10px 10px 0;
+    background: #dc1f5e;
+    color: #fff;
+    padding: 8px 40px;
+    border-radius: 7px;
+}
+textarea {
+    resize: none;
+    width: 100%;
+    -webkit-appearance: none;
+}
+.txtbtmimg{
+    font-size: 12px;
+    text-align: center;
+}
+.photoup {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    margin: 20px auto;
+    background: #c3c3c3;
+}
+.searchmnbd{    
+    height: auto;
+    background-color: #e2e2e2;
+    float: left;
+    z-index: 9;
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 6px 0 #0000004d;
+}
+.mrgn_tp20{
+	margin-top: 20px;
+}
+.col-md-12.col12 {
+    padding: 15px 0 30px;
+    border-bottom: 1px solid #cacaca;
+}
+h4.formhead {
+    margin: 50px 20px 10px;
+    font-size: 22px;
+}
+
+
+
+
+.upload-button {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+    float: left;
+    height:160px;
+    width:140px;
+}
+
+.profile-pic {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+}
+
+.file-upload {
+    display: none;
+}
+
+
+li.fa.fa-sign-out.pull-left {
+    padding: 0;
+}
+
+
+
+.mnbdview{
+    margin:50px 0 20px;
+}
+.prfldiv {
+    height: auto;
+    float: left;
+    width: 100%;
+        padding-bottom: 15px;
+    margin-bottom: 30px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 6px #00000054;
+}
+.prfldetailss{
+    padding: 20px;
+}
+.profile_image {
+    height: 180px;
+    width: 145px;
+    padding: 0;
+    background: #aeaeae;
+}
+.profile_image img{
+    width: 100%;
+    height: 100%;
+}
+
+table{
+    line-height: 25px;
+}
+h4.nameh4 {
+    color: #c61e56;
+    border-bottom: 1px dotted;
+}
+.ftrprfldiv {
+    border: 1px solid #b51e4e;
+    color: #c61e56;
+    text-align: center;
+    font-size: 25px;
+    padding: 7px;
+    border-collapse: collapse;
+    margin: 0;
+}
+.ftrprfldiv:hover {
+    background-color: #c61e56;
+    color: #fff;
+    border-color: #c61e56;
+}
+.expressbtn {
+    background: #c32459;
+    float: right;
+    width:100%;
+    padding: 13px 50px;
+    /*border-radius: 4px;*/
+    color: #fff;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.expressbtn:hover{
+    background-color: #ad1648;
+}
+a, a:focus, a:hover {
+    color: #ffffff;
+}
+.contact_tab_prfl{
+    padding: 0;
+    margin-top: 10px;
+}
+.padng0{
+    padding: 0;
+
+}
+label.radio-inline {
+    display: initial;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

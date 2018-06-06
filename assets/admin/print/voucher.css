@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font: 10pt "arial";
+	
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.page {
+    width: 8.3in;
+    min-height: 5.8in;
+    padding:25px;
+    margin: 1cm auto;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+}
+.brdr_fl{
+    border-left:1px solid;
+}
+tr{
+	width:100%;
+	}
+th{
+    border:1px solid;
+    height: 30px;
+    padding: 0 10px;
+}
+td{
+        padding: 2px;
+    border: 1px solid;
+    border-collapse: collapse;
+    }
+table {
+    font-size: 14px;	
+    width: 100%;
+    border-collapse: collapse;
+}	
+.sub_page{
+	height:auto;
+	width:100%;
+	/*background-color:#f2f2f2;
+	border:1px solid;
+    border-radius: 10px; 
+   	padding: 10px;*/
+	float:left;}
+
+.bld{
+	font-weight:600;}
+
+td.amnd {
+    text-align: right;
+    font-size: 18px;
+    padding: 10px;
+}
+.head {
+    width: 100%;
+    float: left;
+    padding: 10px;
+    border: 1px solid;
+}
+.adres {
+    float: left;
+    width: 50%;
+}
+.brdrno{
+    border:none;
+}
+
+
+
+
+
+.logo{
+    margin-right: 10px;
+        height: 80px;
+    width: 80px;
+    background: #f3f3f3;
+    float: left;
+}
+span.ads {
+    font-size: 14px;
+    font-weight: 500;
+}
+span.cusu_ads {
+    font-size: 12px;
+    font-weight: 500;
+}
+h2.invstxthd {
+    float: left;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    padding: 0;
+    margin: 1px 0;
+}
+.ttl{
+        text-align: right;
+    font-size: 18px;
+    padding-right: 10px;
+    font-weight: 600;
+}
+.customer_det {
+    float: right;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+.sign_bx {
+    height: 40px;
+    width: 220px;
+
+    border-bottom: 2px solid;
+}
+h2.mnads {
+    margin: 0;
+}
+
+
+
+
+
