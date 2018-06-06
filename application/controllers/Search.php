@@ -125,11 +125,11 @@ class Search extends CI_Controller
         if(!empty($_POST['gender']))
         {
             if($cnt!=0)
-                    $res.=" or ";
+                    $res.=" and ";
                 $res.=" u.gender ='".$_POST['gender']."'";
                 $cnt++;
         }
-        
+
             $result_count = $this->mdl_search->get_search_results_new($res);
             $out='';
        foreach ($result_count as $key) {

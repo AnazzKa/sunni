@@ -243,7 +243,12 @@ input#checkbox160o {
 <script type="text/javascript" src="<?php echo base_url();?>assets/user/js/waves/waves.min-vs-1.js"></script>
 <!-- <script type="text/javascript" src="<?php //echo base_url();?>assets/user/js/search.js"></script> -->
 <script type="text/javascript">
-
+var favorite=[];
+var education=[];
+var islamic_education=[];
+var wors_on=[];
+var heights=[];
+var gender='<?php echo $s_gender; ?>';
     $(document).ready(function() {
     //$('[id^=detail-]').hide();
     $('.toggle').click(function() {
@@ -251,16 +256,16 @@ input#checkbox160o {
         $target = $('#'+$input.attr('data-toggle'));
         $target.slideToggle();
     });
-    
+    $.each($("input[name='casts']:checked"), function(){            
+                favorite.push($(this).val());
+            });
+    $.each($("input[name='education']:checked"), function(){            
+                education.push($(this).val());
+            });
     
 });
 
-var favorite=[];
-var education=[];
-var islamic_education=[];
-var wors_on=[];
-var heights=[];
-var gender='<?php echo $s_gender; ?>';
+console.log(favorite);
 function search(type,val)
 {
     if(type==1){
