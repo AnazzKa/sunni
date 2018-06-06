@@ -25,6 +25,11 @@ class Search extends CI_Controller
            'education' => $this->input->post('education'),
            'mother_tongue' => 3
        );
+        $data['s_gender']=$this->input->post('gender');
+        $data['s_agefrom']=$this->input->post('agefrom');
+        $data['s_ageto']=$this->input->post('ageto');
+        $data['s_cast']=$this->input->post('cast');
+        $data['s_education']=$this->input->post('education');
         $result_count = $this->mdl_search->get_search_count($res);
 
         $config["total_rows"] =  count($result_count);
@@ -117,6 +122,14 @@ class Search extends CI_Controller
                 $cnt++;
             }
         }
+        if(!empty($_POST['gender']))
+        {
+            if($cnt!=0)
+                    $res.=" or ";
+                $res.=" u.gender ='".$_POST['gender']."'";
+                $cnt++;
+        }
+        
             $result_count = $this->mdl_search->get_search_results_new($res);
             $out='';
        foreach ($result_count as $key) {

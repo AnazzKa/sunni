@@ -48,6 +48,19 @@ input#checkbox160o {
             <div class="panel-group active" id="accordion">
             <div class="panel panel-danger panel-default ">
                 <div class="panel-heading toggle" id="dropdown-detail-1" data-toggle="detail-1">
+                    <h3 class="panel-title">Gender <span style="float: right;"> > </span> </h3>
+                </div>
+                <ul class="list-group"  id="detail-1">
+                    <li class="list-group-item">
+                        <input class="myCheckboxes1" <?php if($s_gender='MALE'){ ?> checked <?php } ?> onclick="search(0,this.value)" value="MALE" name="gender" id="checkbox160o" type="radio"> <span style="vertical-align: text-bottom;">Male</span> 
+                    </li>
+                    <li class="list-group-item">
+                        <input class="myCheckboxes1" <?php if($s_gender='FEMALE'){ ?> checked <?php } ?>  onclick="search(0,this.value)" value="FEMALE" name="gender" id="checkbox160o" type="radio"> <span style="vertical-align: text-bottom;">Female</span> 
+                    </li>
+                </ul>
+            </div>
+            <div class="panel panel-danger panel-default ">
+                <div class="panel-heading toggle" id="dropdown-detail-1" data-toggle="detail-1">
                     <h3 class="panel-title">MADHAB <span style="float: right;"> > </span> </h3>
                 </div>
                 <ul class="list-group"  id="detail-1">
@@ -55,7 +68,7 @@ input#checkbox160o {
                     
                 
                     <li class="list-group-item">
-                        <input class="myCheckboxes1" onclick="search(1,this.value)" value="<?php echo $cast['id'];?>" name="casts" id="checkbox160o" type="checkbox"> <span style="vertical-align: text-bottom;"><?php echo $cast['cast'];?></span> 
+                        <input class="myCheckboxes1" <?php if($s_cast==$cast['id']){ ?> checked <?php } ?> onclick="search(1,this.value)" value="<?php echo $cast['id'];?>" name="casts" id="checkbox160o" type="checkbox"> <span style="vertical-align: text-bottom;"><?php echo $cast['cast'];?></span> 
                     </li>
                     <?php } ?>
                     
@@ -72,7 +85,7 @@ input#checkbox160o {
                     
                 
                     <li class="list-group-item">
-                        <input class="myCheckboxes1" onclick="search(2,this.value)" value="<?php echo $education['id'];?>" name="education" id="checkbox160o" type="checkbox"> <span style="vertical-align: text-bottom;"><?php echo $education['title'];?></span> 
+                        <input class="myCheckboxes1" <?php if($s_education==$education['id']){ ?> checked <?php } ?> onclick="search(2,this.value)" value="<?php echo $education['id'];?>" name="education" id="checkbox160o" type="checkbox"> <span style="vertical-align: text-bottom;"><?php echo $education['title'];?></span> 
                     </li>
                     <?php } ?>
                     
@@ -230,6 +243,7 @@ input#checkbox160o {
 <script type="text/javascript" src="<?php echo base_url();?>assets/user/js/waves/waves.min-vs-1.js"></script>
 <!-- <script type="text/javascript" src="<?php //echo base_url();?>assets/user/js/search.js"></script> -->
 <script type="text/javascript">
+
     $(document).ready(function() {
     //$('[id^=detail-]').hide();
     $('.toggle').click(function() {
@@ -238,6 +252,7 @@ input#checkbox160o {
         $target.slideToggle();
     });
     
+    
 });
 
 var favorite=[];
@@ -245,6 +260,7 @@ var education=[];
 var islamic_education=[];
 var wors_on=[];
 var heights=[];
+var gender='<?php echo $s_gender; ?>';
 function search(type,val)
 {
     if(type==1){
@@ -290,13 +306,16 @@ else {
     heights = heights.filter(e => e !== val);
 }
 }
-console.log(favorite);
-console.log(education);
-console.log(islamic_education);
-console.log(wors_on);
-console.log(heights);
+else if(type==0){
+    gender=$("input[name='gender']:checked").val();
+}
+// console.log(gender);
+// console.log(education);
+// console.log(islamic_education);
+// console.log(wors_on);
+// console.log(heights);
 $('#search_new').empty();
-$.ajax({type: "POST",url: "<?php echo base_url(); ?>search/search_new",data:{favorite:favorite,education:education,islamic_education:islamic_education,wors_on:wors_on,heights:heights}, success: function(result){
+$.ajax({type: "POST",url: "<?php echo base_url(); ?>search/search_new",data:{favorite:favorite,education:education,islamic_education:islamic_education,wors_on:wors_on,heights:heights,gender:gender}, success: function(result){
               console.log(result);
              $('#search_new').html(result);             
          }
